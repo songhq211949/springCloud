@@ -1,0 +1,66 @@
+#server:
+#  port: 7001
+#eureka:
+#  instance: #eureka实例定义
+#    hostname: eureka-7001.com #设置清理的间隔时间，默认这个时间使用的毫秒单单位（默认是60秒）
+#  client: #客户端进行Eureka注册的配置
+#      service-url: 
+#        defaultZone: http://eureka-7001.com:7001/eureka
+#      register-with-eureka: false #当前的微服务不注册到eureka之中
+#      fetch-registry: false
+#  server:
+#    enable-self-preservation: false #是否要设置成保护模式
+#    eviction-interval-timer-in-ms: 60000  #不通过eureka获取注册信息
+#spring:
+#  application:
+#    name: microcloud-eureka-7001
+#security:
+#  user:
+#    name: eureka
+#    password: eureka
+    
+#这个是本地的代码回退到上一个版本后，略作修改再推送到github   
+spring:
+  application:
+    name: eurekaServer
+server:
+  port: 9003
+  
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+    
+#management:
+#  context-path: /
+#  port: 8089
+#  address: 127.0.0.1
+
+eureka:
+  client:
+    #避免服务中心注册自己，默认的配置都为true  
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+  instance: 
+  #不以计算机名访问，而以127.0.0.2的方式本服务注册中心实例
+    prefer-ip-address: true
+    hostname: 127.0.0.1
+#  server:
+#    enable-self-preservation: false
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   

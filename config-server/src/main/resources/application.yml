@@ -1,0 +1,25 @@
+#关于本微服务的配置端口及application名称
+server:
+  port: 9008
+spring:
+  application:
+    name: config-server
+  #关于springCloud config中心的配置
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/songhq211949/config-repository  # 配置git仓库的地址
+          #search-paths: '{application}' # git仓库地址下的相对地址，可以配置多个，用,分割,可以不配
+          username:  songhq211949 # git仓库的账号
+          password:  song0426  # git仓库的密码
+          #注册到eureka服务中心去
+eureka:
+  #及在eureka注册中心显示的名称，默认就是application：port
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  #注册到那个服务注册中心
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9003/eureka
