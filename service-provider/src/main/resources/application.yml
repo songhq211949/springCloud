@@ -1,6 +1,6 @@
 spring:
   application:
-    name: euraka-provider
+    name: eureka-provider
 server:
   port: 9004
   

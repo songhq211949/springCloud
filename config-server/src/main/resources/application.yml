@@ -9,9 +9,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/songhq211949/config-repository  # 配置git仓库的地址
+          uri: https://gitee.com/dahaizhenqiang/config-repository.git  # 配置git仓库的地址
           #search-paths: '{application}' # git仓库地址下的相对地址，可以配置多个，用,分割,可以不配
-          username:  songhq211949 # git仓库的账号
+          username:  songhq211949@163.com # git仓库的账号
           password:  song0426  # git仓库的密码
           #注册到eureka服务中心去
 eureka:
