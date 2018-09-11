@@ -1,4 +1,4 @@
-package songhq.com.provider.web;
+package songhq.com.gateway.web;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,15 +17,6 @@ public class UserController {
 	@ResponseBody
 	@RequestMapping(value ="/getUser",method=RequestMethod.POST)
 	public Map<String,Object> getUser(@RequestParam("name") String name,@RequestParam("age")int age){
-		HashMap<String, Object> userMap = new HashMap<String,Object>();
-		userMap.put("name", name);
-		userMap.put("age", age);
-		return userMap;
-		
-	}
-	@ResponseBody
-	@RequestMapping(value ="/getUser/23",method=RequestMethod.POST)
-	public Map<String,Object> getUser2(@RequestParam("name") String name,@RequestParam("age")int age){
 		HashMap<String, Object> userMap = new HashMap<String,Object>();
 		userMap.put("name", name);
 		userMap.put("age", age);

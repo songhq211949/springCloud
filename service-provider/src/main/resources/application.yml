@@ -9,7 +9,9 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.2:9003/eureka
   instance:
+     #以ip的方式与服务名称或是id进行映射
      prefer-ip-address: true 
-     hostname: user-server
+     #注册eureka中的id名称
+     instance-id: ${spring.application.name}:${server.port}
 
       

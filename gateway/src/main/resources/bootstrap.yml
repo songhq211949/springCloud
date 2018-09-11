@@ -1,0 +1,31 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: gateway
+zuul:
+  routes:
+    user-service:
+      path: /user2/**
+      serviceId:  eureka-provider
+      strip-prefix: true  #为true时去掉转发时的前缀，及去掉user2
+      
+#ribbon:
+#  eureka: 
+#    enabled: false
+eureka:
+  #及在eureka注册中心显示的名称，默认就是application：port
+  instance:
+    #以IP的方式注册服务，默认为false,以计算机名的方式注册
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
+  #注册到那个服务注册中心+       
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9003/eureka       
+      
+#ribbon:
+#listOfServers: localhost:8080, localhost:8081
+#ribbon:
+#eureka:
+#enabled: false
