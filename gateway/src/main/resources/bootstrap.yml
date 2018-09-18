@@ -9,7 +9,12 @@ zuul:
       path: /user2/**
       serviceId:  eureka-provider
       strip-prefix: true  #为true时去掉转发时的前缀，及去掉user2
+    customers: /customers/**      
       
+      
+management:
+  security:
+    enabled: false
 #ribbon:
 #  eureka: 
 #    enabled: false
