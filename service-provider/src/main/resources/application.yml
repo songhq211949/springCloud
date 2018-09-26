@@ -1,6 +1,31 @@
 spring:
   application:
     name: eureka-provider
+  kafka:
+    bootstrap-servers:
+    #配置kafka集群
+      - 192.168.26.128:9092
+      - 192.168.26.128:9093
+      - 192.168.26.128:9094
+    #配置生产者  
+    producer:
+      #尝试的次数
+      retries: 0  
+      #缓存大小
+      buffer-memory: 33554432
+    #配置消费者
+    consumer:
+      #使listenGroup有两个消费者
+      group-id: listenGroup
+      enable-auto-commit: true
+      #设置分区的偏移量
+      auto-offset-reset: earliest 
+      #下面是kafka-client版本造成的错误
+#      key-deserializer:
+#        org.apache.kafka.common.serialization.StringSerializer
+#      value-deserializer:
+#        org.apache.kafka.common.serialization.StringSerializer
+    
 server:
   port: 9004
   

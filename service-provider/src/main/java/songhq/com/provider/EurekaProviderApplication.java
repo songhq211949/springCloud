@@ -9,9 +9,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 public class EurekaProviderApplication {
 	
 	public static void main(String[] args) {
-		
 		SpringApplication.run(EurekaProviderApplication.class, args);
 	}
-	
-
 }
