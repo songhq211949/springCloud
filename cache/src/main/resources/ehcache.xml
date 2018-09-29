@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+    <!-- 指定一个文件目录，当EhCache把数据写到硬盘上时，将把数据写到这个文件目录下 -->
+    <!-- java.io.tmpdir - Default temp file path -->
+    <diskStore path="java.io.tmpdir"/>
+    <!-- 设定缓存的默认数据过期策略 -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            overflowToDisk="true"
+            timeToIdleSeconds="10"
+            timeToLiveSeconds="20"
+            diskPersistent="false"
+            diskSpoolBufferSizeMB="30"
+            maxEntriesLocalDisk="10000000"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"/>
+
+    <!--  interaction - start --> 
+    
+    <!--  
+    name  缓存名称
+    maxElementsInMemory 设置基于内存缓存可存放对象的最大数目
+    maxElementsOnDisk  在磁盘上缓存的element的最大数目，默认值为0，表示不限制。 
+    eternal   如果为true，表示对象永远不会过期 ，false 时为timeToldleSeconds和timeToLiveSeconds
+    timeToldleSeconds  对象允许处于空闲的最长时间
+    timeToLiveSeconds  即缓存自创建日期起能够存活的最长时间
+    overflowToDisk  如果内存中数据超过内存限制，是否要缓存到磁盘上 true表示存在硬盘上
+    memoryStoreEvictionPolicy  缓存对象清除策略 
+          以下为三种策略
+     FIFO 先进先出 LFU 一直以来最少被使用策略    LRU最近最少被使用
+    
+    
+    -->   
+    <cache name="cacheTest"
+        maxElementsInMemory="200"
+        eternal="false"
+        overflowToDisk="true"
+        timeToIdleSeconds="10"
+        timeToLiveSeconds="20"
+        memoryStoreEvictionPolicy="LFU" />
+</ehcache> 
