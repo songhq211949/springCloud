@@ -28,7 +28,7 @@ public class EhcacheManager {
 		miguSession.setUserToken(userToken);
 		return miguSession;
 	}
-	
+	//
 	@CacheEvict(value="cacheTest", cacheManager="ehCacheCacheManager", key="'migusession_'+#userId+'_'+#userToken")
 	public void deleteMiguSessionCache(String userId, String userToken){
 		
