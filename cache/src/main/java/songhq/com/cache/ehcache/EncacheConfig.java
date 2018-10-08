@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 /**
- * 注解的方式整合ehcache
+ * 注解的方式整合ehcache,ehcache是一个纯java缓存方案
  *
  */
 @Configuration

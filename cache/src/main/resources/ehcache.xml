@@ -28,7 +28,7 @@
     overflowToDisk  如果内存中数据超过内存限制，是否要缓存到磁盘上 true表示存在硬盘上
     memoryStoreEvictionPolicy  缓存对象清除策略 
           以下为三种策略
-     FIFO 先进先出 LFU 一直以来最少被使用策略    LRU最近最少被使用
+    FIFO 先进先出 LFU 一直以来最少被使用策略    LRU最近最少被使用
     
     
     -->   

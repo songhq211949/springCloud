@@ -47,6 +47,12 @@ public class MiguSession implements Serializable{
 	public void setDate(Date date) {
 		this.date = date;
 	}
+
+	@Override
+	public String toString() {
+		return "MiguSession [sessionId=" + sessionId + ", userId=" + userId + ", userToken=" + userToken + ", date="
+				+ date + "]";
+	}
 	
 	
 	

@@ -23,6 +23,43 @@
 
 	<dependencies>
 
+	<dependency>
+		   	<groupId>org.bouncycastle</groupId>
+		   	<artifactId>bcprov-jdk15on</artifactId>
+		   	<version>1.47</version>
+	  </dependency>
+	
+	<dependency>
+		   	<groupId>org.apache.httpcomponents</groupId>
+		   	<artifactId>httpclient</artifactId>
+		   	<version>4.5.2</version>
+	   </dependency>
+
+	<!--引入commons-httpclient  -->
+	<dependency>
+		   	<groupId>commons-httpclient</groupId>
+		   	<artifactId>commons-httpclient</artifactId>
+		   	<version>3.1</version>
+	   </dependency>
+	
+	
+		<!-- 引入common-lang包 -->
+	   <dependency>
+		   	<groupId>commons-lang</groupId>
+		   	<artifactId>commons-lang</artifactId>
+		   	<version>2.6</version>
+	   </dependency>
+	    <!--引入redis依赖  -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<!-- <version>2.7.3</version> --><!--spring boot里面已经对他进行了版本控制  -->
+		</dependency>
 		<!-- ehcache spring 自带的EhcacheManager是在spring-context 和spring-context-support模块中 -->
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
@@ -56,7 +93,7 @@
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
-			<!-- spring Cloudx相关的组件版本控制 -->
+			<!-- spring Cloud相关的组件版本控制 -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
