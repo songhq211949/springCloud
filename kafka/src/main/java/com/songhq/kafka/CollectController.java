@@ -32,4 +32,7 @@ public class CollectController {
             return "发送kafka失败";
         }
     }
+    public static void main(String[] args) {
+		System.out.println(Integer.valueOf(""));
+	}
 }

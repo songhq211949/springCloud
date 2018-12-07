@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 import songhq.com.cache.service.EhcacheManager;
 import songhq.com.cache.vo.MiguSession;
 
+/**
+ * 测试ehcache缓存
+ * @author Administrator
+ *
+ */
 @RestController
 @RequestMapping("/ehcache")
 public class EhcaheController {

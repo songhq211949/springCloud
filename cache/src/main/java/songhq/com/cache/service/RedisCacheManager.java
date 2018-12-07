@@ -3,10 +3,12 @@ package songhq.com.cache.service;
 import java.util.Date;
 
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.stereotype.Service;
 
 import songhq.com.cache.vo.MiguSession;
 
-public class RediCacheManager {
+@Service
+public class RedisCacheManager {
 
 	 
 		@Cacheable(value="cacheTest", cacheManager="redisCacheManager", key="'migusession_'+#userId+'_'+#userToken")
@@ -19,4 +21,6 @@ public class RediCacheManager {
 			return miguSession;
 		}  
 	
+		
+		
 }
