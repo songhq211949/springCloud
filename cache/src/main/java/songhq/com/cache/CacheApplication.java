@@ -10,4 +10,5 @@ public class CacheApplication {
 		SpringApplication.run(CacheApplication.class, args);
 	}
 
+	
 }

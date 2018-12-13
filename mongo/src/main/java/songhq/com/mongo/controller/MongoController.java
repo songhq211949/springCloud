@@ -2,6 +2,7 @@ package songhq.com.mongo.controller;
 
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -68,6 +69,15 @@ public class MongoController {
 		hashMap.put("message", "不存在"+contId);
 		return hashMap;
 	}
+	
+	/*public static void main(String[] args) {
+		ArrayList<String> arrayList = new ArrayList<>();
+		arrayList.add("a"); 
+		arrayList.add("b"); 
+		arrayList.add("c"); 
+		List<String> subList = arrayList.subList(0, 8);
+		System.out.println(subList);
+	}*/
 	
 	
 	

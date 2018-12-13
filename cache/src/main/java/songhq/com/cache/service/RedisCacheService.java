@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import songhq.com.cache.vo.MiguSession;
 
 @Service
-public class RedisCacheManager {
+public class RedisCacheService {
 
 	 
 		@Cacheable(value="cacheTest", cacheManager="redisCacheManager", key="'migusession_'+#userId+'_'+#userToken")

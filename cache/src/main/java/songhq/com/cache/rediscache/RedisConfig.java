@@ -134,7 +134,6 @@ public class RedisConfig {
 				for (Object obj : params) {
 					sb.append(obj.toString());
 				}
-				
 				return sb.toString();
 			}
 		};

@@ -19,7 +19,7 @@ public class EhcacheManager {
 	 * @param userToken
 	 * @return
 	 */
-	@Cacheable(value="cacheTest", cacheManager="ehCacheCacheManager", key="'migusession_'+#userId+'_'+#userToken")
+	//@Cacheable(value="cacheTest", cacheManager="ehCacheCacheManager", key="'migusession_'+#userId+'_'+#userToken")
 	public MiguSession getSession(String userId, String userToken) {
 		MiguSession miguSession = new MiguSession();
 		miguSession.setDate(new Date());
@@ -29,7 +29,7 @@ public class EhcacheManager {
 		return miguSession;
 	}
 	//使缓存失效
-	@CacheEvict(value="cacheTest", cacheManager="ehCacheCacheManager", key="'migusession_'+#userId+'_'+#userToken")
+	//@CacheEvict(value="cacheTest", cacheManager="ehCacheCacheManager", key="'migusession_'+#userId+'_'+#userToken")
 	public void deleteMiguSessionCache(String userId, String userToken){
 		
 		System.out.println("清除缓存");
