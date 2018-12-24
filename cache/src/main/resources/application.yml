@@ -3,4 +3,5 @@ spring:
     name: cache
 server:
   port: 9044
+  context-path: /cache
   

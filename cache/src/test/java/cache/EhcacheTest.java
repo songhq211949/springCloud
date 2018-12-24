@@ -1,4 +1,4 @@
-package cache;
+/*package cache;
 
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ public class EhcacheTest {
 	
 	
 	
-	@Test
+	//@Test
 	public void  testEhcache(){
 		
 		CacheManager cacheManager = CacheManager.create("E:\\springCloud\\cache\\src\\main\\resources\\ehcache.xml");
@@ -23,4 +23,4 @@ public class EhcacheTest {
 	}
 	
 
-}
+}*/
